@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <% include ../pages/head.ejs %>
+    <title>Book App</title>
+
+  <body>
+    <main>
+      <p class="header">Bookshelves</p>
+      <p>Amount of books in database: <%=testing.length%></p>
+        <a href="/new">
+          <input type ="submit" value="Search for new books!">
+        </a>
+        <form>
+            <select>
+              <% for(var i = 0; i < testing.length; i++){ %>
+                <option value="<%=testing[i].bookshelf%>"> <%=testing[i].bookshelf%> </option> 
+                <% } %>
+            </select>
+          </form>
+        <% testing = testing.reverse() %>
+        <% for(var i = 0; i < testing.length; i++){ %>
+          <p>My <%=testing[i].bookshelf%> Books</p>        
+        <p><%=testing[i].title%><p>
+        <p><%=testing[i].authors%><p>
+        <!-- <p><%=testing[i].description%><p> -->
+        <img src = "<%=testing[i].image_link%>">
+        <a href="/details/<%= testing[i].id %>">
+          <input type ="submit" value="Book Details">
+        </a>
+        <% } %>
+
+       <!-- <% include ../pages/new.ejs %> -->
+        </main>
+  </body>
+</html>
