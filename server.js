@@ -84,7 +84,7 @@ app.post('/searches', (request, response) => {
     body: JSON.stringify({query: '{ books }'}),
   })
     .then(response => response.json())
-    .then(data => console.log('data returned:', data));
+    .then(data => console.log('data returned:', data.books));
 });
 
 app.delete('/details/:id', removeFromDB);
