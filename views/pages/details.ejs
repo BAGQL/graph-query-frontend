@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+        <% include ../pages/head.ejs %>
+        <title>Details</title>
+
+<body>
+    <main>
+        <p>My <%=testing.bookshelf%> Books</p>        
+        <p><%=testing.title%><p>
+        <p><%=testing.authors%><p>
+        <p><%=testing.description%><p>
+        <img src = "<%=testing.image_link%>">
+    </main>
+    <a href="/">
+        <input type ="submit" value="Mainpage">
+    </a>
+    <div>
+        <form action="" method="POST">
+            <input type="hidden" value="DELETE" name="_method">
+            <input type ="submit" value="Delete Book">
+        </form>
+    </div>
+</body>
+</html>

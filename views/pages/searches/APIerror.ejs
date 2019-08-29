@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+        <% include ../pages/head.ejs %>
+        <title>API Error</title>
+
+<body>
+    <p>Failed to connect to <%=error.hostname%>.</p>
+    <p>The issue could be caused by one of the following:
+        <ul>
+            <li>The Google API may currently be down!</li>
+            <li>Your computer was unable to connect to the internet!</li>
+        </ul>
+    </p>
+</body>
+</html>
