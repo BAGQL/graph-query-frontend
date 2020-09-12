@@ -20,6 +20,6 @@
   "homepage": "https://github.com/team-george/graph-query-frontend#readme",
   "dependencies": {
     "method-override": "^3.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
